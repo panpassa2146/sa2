@@ -1,32 +1,117 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Production Tailwind CSS</title>
-<link href="../dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>MyShop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-slate-100 flex items-center justify-center min-h-screen">
-<div class="bg-white p-8 rounded-2xl shadow-lg max-w-sm w-full">
-<div class="flex justify-between items-center mb-4">
-<span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full
-uppercase tracking-wide">
-Best Seller
-</span>
-<span class="text-gray-400 text-sm">รหัส: TW-2026</span>
-</div>
-<h2 class="text-2xl font-bold text-slate-800 mb-2">หูฟังไร้สาย Gen 3</h2>
-<p class="text-slate-600 mb-6 line-clamp-2">นำโค้ดทั้งหมดขึ้น Github
-ระบบเสียงคุณภาพระดับสตูดิโอ พร้อมระบบตัดเสียงรบกวนอัจฉริยะ (ANC) แบตเตอรี่ใช้งานได้
-ยาวนานตลอดวัน
-</p>
-<div class="flex items-center justify-between mt-auto">
-<div class="text-3xl font-extrabold text-blue-600">฿4,990</div>
-<button class="bg-slate-900 hover:bg-blue-600 text-white font-semibold py-2 px-5
-rounded-xl transition-colors duration-300">
-สั่งซื้อเลย
-</button>
-</div>
-</div>
+
+<body class="bg-gray-100">
+
+<!-- 🌐 Navbar -->
+<nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+  <div class="flex items-center gap-3">
+    <img src="https://via.placeholder.com/40" class="rounded-full">
+    <span class="text-xl font-bold text-blue-600">MyShop</span>
+  </div>
+
+  <div class="space-x-6 text-gray-700 font-medium">
+    <a href="index.html" class="hover:text-blue-500">Home</a>
+    <a href="about.html" class="hover:text-blue-500">About</a>
+    <a href="products.html" class="hover:text-blue-500">Products</a>
+    <a href="contact.html" class="hover:text-blue-500">Contact</a>
+  </div>
+</nav>
+
+<!-- 🎯 Hero -->
+<section class="text-center py-12 px-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+  <h1 class="text-3xl md:text-5xl font-bold mb-4">
+    ยินดีต้อนรับสู่ MyShop 🛍️
+  </h1>
+  <p class="text-lg opacity-90">
+    เลือกสินค้าคุณภาพดี ราคาสบายกระเป๋า
+  </p>
+</section>
+
+<!-- 🛍️ Product Cards -->
+<section class="max-w-6xl mx-auto px-6 py-10">
+
+  <h2 class="text-2xl font-bold mb-6 text-center">สินค้าแนะนำ</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Card 1 -->
+    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+      <img src="https://via.placeholder.com/300" class="rounded-t-2xl">
+      <div class="p-4">
+        <h3 class="font-bold text-lg">หูฟังไร้สาย</h3>
+        <p class="text-gray-600 text-sm">เสียงดี เบสแน่น ใช้งานได้นาน</p>
+        <p class="text-blue-500 font-bold mt-2">฿499</p>
+        <button class="mt-3 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
+          ดูรายละเอียด
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+      <img src="https://via.placeholder.com/300" class="rounded-t-2xl">
+      <div class="p-4">
+        <h3 class="font-bold text-lg">สมาร์ทวอทช์</h3>
+        <p class="text-gray-600 text-sm">วัดสุขภาพ เชื่อมต่อมือถือ</p>
+        <p class="text-blue-500 font-bold mt-2">฿990</p>
+        <button class="mt-3 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
+          ดูรายละเอียด
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-2">
+      <img src="https://via.placeholder.com/300" class="rounded-t-2xl">
+      <div class="p-4">
+        <h3 class="font-bold text-lg">กระเป๋าแฟชั่น</h3>
+        <p class="text-gray-600 text-sm">ใส่โน้ตบุ๊กได้ ดีไซน์ทันสมัย</p>
+        <p class="text-blue-500 font-bold mt-2">฿350</p>
+        <button class="mt-3 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
+          ดูรายละเอียด
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 📌 Footer -->
+<footer class="bg-gray-800 text-white text-center py-4">
+  <p>© 2026 MyShop | Designed with Tailwind CSS</p>
+</footer>
+
 </body>
 </html>
+
+<section class="products">
+  <h2>Our Bags</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://source.unsplash.com/300x300/?bag" alt="">
+      <h3>Classic Bag</h3>
+      <p>฿590</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://source.unsplash.com/300x300/?handbag" alt="">
+      <h3>Leather Bag</h3>
+      <p>฿890</p>
+    </div>
+
+    <div class="product-card">
+      <img src="https://source.unsplash.com/300x300/?backpack" alt="">
+      <h3>Backpack</h3>
+      <p>฿790</p>
+    </div>
+
+  </div>
+</section>

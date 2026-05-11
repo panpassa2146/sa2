@@ -1,0 +1,99 @@
+.products {
+  padding: 40px;
+  background: #f5f7fb;
+  text-align: center;
+}
+
+.products h2 {
+  margin-bottom: 30px;
+}
+
+/* Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+/* รูป */
+.img-box {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+}
+
+/* ราคา */
+.price {
+  color: #ff4757;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ปุ่ม */
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* ปุ่มซื้อ */
+.buy {
+  background: #ff6b81;
+  color: white;
+}
+
+.buy:hover {
+  background: #ff4757;
+}
+
+/* ปุ่มรายละเอียด */
+.detail {
+  background: #dfe4ea;
+}
+
+.detail:hover {
+  background: #ced6e0;
+}
+.img-box {
+  width: 140px;      /* 🔥 ลดขนาดกรอบ */
+  height: 140px;     /* 🔥 ให้เป็นสี่เหลี่ยมเท่ากัน */
+  margin: 0 auto;    /* จัดกลาง */
+  background: #f1f1f1;
+  padding: 8px;      /* ลด padding */
+  border-radius: 10px;
+}
+
+/* รูปต้องเล็กตามกรอบ */
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

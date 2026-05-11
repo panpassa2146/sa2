@@ -1,117 +1,156 @@
-import "./Home.css";
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Bag Home</title>
 
-function Home() {
-  return (
-    <div className="home">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-      {/* 🔥 Hero Banner */}
-      <section className="hero">
-        <div className="hero-text">
-          <h1>กระเป๋าสุดชิค</h1>
-          <p>ดีไซน์ทันสมัย ราคาคุ้มค่า</p>
-          <button>เลือกซื้อสินค้า</button>
-        </div>
-      </section>
+<body class="bg-gray-50">
 
-      {/* 🛍 หมวดหมู่ */}
-      <section className="categories">
-        <h2>หมวดหมู่สินค้า</h2>
+<!-- 👜 Navbar -->
+<nav class="bg-black text-white p-4">
+  <div class="container mx-auto flex justify-between items-center">
 
-        <div className="category-grid">
-          <div className="category-card">👜 กระเป๋าสะพาย</div>
-          <div className="category-card">🎒 กระเป๋าเป้</div>
-          <div className="category-card">💼 กระเป๋าทำงาน</div>
-          <div className="category-card">🧳 กระเป๋าเดินทาง</div>
-        </div>
-      </section>
-
-      {/* ⭐ สินค้าแนะนำ */}
-      <section className="featured">
-        <h2>สินค้าแนะนำ</h2>
-
-        <div className="product-grid">
-          <div className="product-card">
-            <img src="https://source.unsplash.com/300x300/?bag" alt="" />
-            <h3>Classic Bag</h3>
-            <p>฿590</p>
-          </div>
-
-          <div className="product-card">
-            <img src="https://source.unsplash.com/300x300/?handbag" alt="" />
-            <h3>Leather Bag</h3>
-            <p>฿890</p>
-          </div>
-
-          <div className="product-card">
-            <img src="https://source.unsplash.com/300x300/?backpack" alt="" />
-            <h3>Backpack</h3>
-            <p>฿790</p>
-          </div>
-        </div>
-      </section>
-
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">👜</span>
+      <h1 class="text-xl font-bold">Luxury Bag Store</h1>
     </div>
-  );
-}
 
-export default Home;
+    <div class="hidden md:flex gap-6 text-sm">
+      <a href="#" class="hover:text-yellow-400">Home</a>
+      <a href="products.html" class="hover:text-yellow-400">Products</a>
+      <a href="#" class="hover:text-yellow-400">Collection</a>
+      <a href="#" class="hover:text-yellow-400">Contact</a>
+    </div>
 
-import { useState } from "react";
-import "./Home.css";
+  </div>
+</nav>
 
-function Home() {
-  const [cart, setCart] = useState([]);
+<!-- ✨ HERO (Premium Look) -->
+<section class="bg-gradient-to-r from-black via-gray-900 to-black text-white py-24 text-center">
 
-  const products = [
-    { id: 1, name: "Classic Bag", price: 590, img: "https://source.unsplash.com/300x300/?bag" },
-    { id: 2, name: "Leather Bag", price: 890, img: "https://source.unsplash.com/300x300/?handbag" },
-    { id: 3, name: "Backpack", price: 790, img: "https://source.unsplash.com/300x300/?backpack" },
-  ];
+  <h1 class="text-4xl md:text-6xl font-bold">
+    Luxury Bag Collection
+  </h1>
 
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-  };
+  <p class="mt-4 text-gray-300 text-lg">
+    กระเป๋าแฟชั่นระดับพรีเมียม ดีไซน์หรู สำหรับทุกไลฟ์สไตล์
+  </p>
 
-  return (
-    <div className="home">
+  <div class="mt-8 flex justify-center gap-4">
+    <button class="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold hover:bg-yellow-400 transition">
+      Shop Now
+    </button>
 
-      {/* 🔥 แสดงจำนวนตะกร้า */}
-      <div className="cart-bar">
-        🛒 ตะกร้า: {cart.length} ชิ้น
+    <button class="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">
+      View Collection
+    </button>
+  </div>
+
+</section>
+
+<!-- 💎 FEATURE -->
+<section class="container mx-auto px-4 py-12">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <div class="text-3xl">🚚</div>
+      <h3 class="font-bold mt-3">Free Delivery</h3>
+      <p class="text-gray-500 text-sm mt-2">ส่งฟรีทั่วประเทศ</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <div class="text-3xl">💎</div>
+      <h3 class="font-bold mt-3">Premium Quality</h3>
+      <p class="text-gray-500 text-sm mt-2">วัสดุคุณภาพสูง</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <div class="text-3xl">🔒</div>
+      <h3 class="font-bold mt-3">Secure Payment</h3>
+      <p class="text-gray-500 text-sm mt-2">ปลอดภัย 100%</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- 👜 BEST SELLER -->
+<section class="container mx-auto px-4 py-10">
+
+  <h2 class="text-2xl font-bold text-center mb-6">
+    🔥 Best Seller Bags
+  </h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <!-- Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
+
+      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+        class="h-56 w-full object-cover">
+
+      <div class="p-5">
+        <h3 class="font-bold">Classic Leather Bag</h3>
+        <p class="text-gray-500 text-sm">กระเป๋าหนังแท้หรูหรา</p>
+
+        <div class="mt-2 text-yellow-600 font-bold">฿1,290</div>
+
+        <button class="mt-4 w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+          View Product
+        </button>
       </div>
 
-      {/* Hero */}
-      <section className="hero">
-        <h1>กระเป๋าสุดชิค</h1>
-        <p>ดีไซน์ทันสมัย ราคาคุ้มค่า</p>
-      </section>
+    </div>
 
-      {/* สินค้า */}
-      <section className="featured">
-        <h2>สินค้าแนะนำ</h2>
+    <!-- Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
 
-        <div className="product-grid">
-          {products.map((item) => (
-            <div className="product-card" key={item.id}>
-              <img src={item.img} alt="" />
-              <h3>{item.name}</h3>
-              <p>฿{item.price}</p>
+      <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80"
+        class="h-56 w-full object-cover">
 
-              {/* 🔥 ปุ่มเพิ่มตะกร้า */}
-              <button 
-                className="add-cart"
-                onClick={() => addToCart(item)}
-              >
-                เพิ่มลงตะกร้า
-              </button>
+      <div class="p-5">
+        <h3 class="font-bold">Fashion Handbag</h3>
+        <p class="text-gray-500 text-sm">ดีไซน์ทันสมัย</p>
 
-            </div>
-          ))}
-        </div>
-      </section>
+        <div class="mt-2 text-yellow-600 font-bold">฿990</div>
+
+        <button class="mt-4 w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+          View Product
+        </button>
+      </div>
 
     </div>
-  );
-}
 
-export default Home;
+    <!-- Card -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:-translate-y-2 transition">
+
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+        class="h-56 w-full object-cover">
+
+      <div class="p-5">
+        <h3 class="font-bold">Premium Backpack</h3>
+        <p class="text-gray-500 text-sm">เหมาะสำหรับเดินทาง</p>
+
+        <div class="mt-2 text-yellow-600 font-bold">฿1,590</div>
+
+        <button class="mt-4 w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+          View Product
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 📢 Footer -->
+<footer class="bg-black text-white text-center p-6 mt-10">
+  <p>© 2026 Luxury Bag Store | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
